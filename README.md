@@ -15,13 +15,11 @@
 
 ## Abstract
 The [project](/cell_segmentation.ipynb) follows the traditional machine learning process of training and testing. The goals of the project are to achieve semantic segmentation of the nuclei / cell images and use [CCA](#technical-background) on the segmented image to count the cells in the image.
-- The figure on the left displaying the input and ground truth images are an example of the X train and Y train used to train the FCN model for semantic segmentation. 
-- The right figure displays a graph of some model metrics after training. Accuracy refers to the pixel accuracy of the semantic segmentation.
+- The figure below is displaying the input and ground truth images are an example of the X train and Y train used to train the FCN model for semantic segmentation. 
+<img src="/imgs/xtrain_ytrain.png" width=500/>
 
-<p float="left">
-  <img src="/imgs/xtrain_ytrain.png" width=500/>
-  <img src="/imgs/model_metrics.png" width=400/>
-</p>
+- The figure below is a graph of some model metrics after training. Accuracy refers to the pixel accuracy of the semantic segmentation.
+<img src="/imgs/model_metrics.png" width=400/>
 
 After training, we are able to used the trained FCN model for predictions. The figure below displays model predictions of some training data to compare to the ground truth data. 
 - Post processing in the form of a threshold=0.5 is used to make the predicted image resemble the ground truth data more. A threshold also converts the predicted image into a binary image which is also the type of image used for Y train. 
