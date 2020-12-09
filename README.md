@@ -14,7 +14,7 @@
 - CCA is a technqiue that labels regions of an image. In our case, it labels the white pixel areas (nuclei / foreground) surrounded by blacks pixels (background) as a region. CCA then labels the entire image and simultaneously counts the regions. Thus, counting the number of nuclei in the image.
 
 ## Abstract
-The [project](/cell_segmentation.ipynb) follows the traditional machine learning process of training and testing. 
+The [project](/cell_segmentation.ipynb) follows the traditional machine learning process of training and testing. The goals of the project are to achieve semantic segmentation of the nuclei / cell images and use [CCA](#technical-background) on the segmented image to count the cells in the image.
 - The figure on the left displaying the input and ground truth images are an example of the X train and Y train used to train the FCN model for semantic segmentation. 
 - The right figure displays a graph of some model metrics after training. Accuracy refers to the pixel accuracy of the semantic segmentation.
 <p float="left">
@@ -30,7 +30,7 @@ Below is an example of model predictions on unseen test data. Despite the nuclei
 
 <img src="/imgs/X_test_Predict.png" height=200/>
 
-After predictions, we are able to take the IOU of the model and apply CCA to the predicted image to count the nuclei in the image thus concluding and achieving the goals of this project. 
+After predictions, we are able to take the [IOU](#technical-background) of the model and apply [CCA](#technical-background) to the predicted image to count the nuclei in the image thus concluding and achieving the goals of this project. 
 
 <img src="/imgs/simple_metrics.png"/>
 
